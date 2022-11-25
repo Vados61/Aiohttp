@@ -1,0 +1,43 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:5000/api/v1
+
+# создание нового объявления
+POST {{baseUrl}}/adv/
+Content-Type: application/json
+
+{
+  "header": "Buy house",
+  "description": "House description",
+  "owner": "1"
+}
+
+###
+
+# получение всех объявлений
+GET {{baseUrl}}/adv/
+Content-Type: application/json
+
+###
+
+# получение объявления по id
+GET {{baseUrl}}/adv/3
+Content-Type: application/json
+
+###
+
+# изменение объявления
+PATCH {{baseUrl}}/adv/1
+Content-Type: application/json
+
+{
+  "header": "Buy elephant",
+  "description": "Elephant description",
+  "owner": "1"
+}
+
+###
+
+# удаление объявления по id
+DELETE {{baseUrl}}/adv/10
+Content-Type: application/json
